@@ -1,0 +1,10 @@
+[package]
+name = "adlx-profile"
+version = "0.1.0"
+edition = "2024"
+default-run = "adlx-profile"
+
+[dependencies]
+libloading = "0.9.0"
+quick-xml = { version = "0.41.0", features = ["serialize"] }
+serde = { version = "1.0.228", features = ["derive"] }
