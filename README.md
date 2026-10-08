@@ -19,9 +19,10 @@ uses, so it does not fight the driver and nothing is flashed. All changes are
 Navi / RDNA2, RDNA3, RDNA4 - i.e. Radeon **RX 6000 / RX 7000 / RX 9000**
 series. Older architectures (Vega/Polaris/RX 5000) are not supported.
 
-Validated live on an RX 6900 XT (RDNA2). On RDNA4 (RX 9070 XT) some values are
-**offsets** rather than absolutes (see below) - verify with `gpu-info`/`plan`
-before relying on it.
+Validated live on an RX 6900 XT (RDNA2) and an RX 6700 XT (Sapphire, Navi 22,
+`DevID 73DF`), where core clock and voltage applied as absolute values as
+documented above. On RDNA4 (RX 9070 XT) some values are **offsets** rather than
+absolutes (see below) - verify with `gpu-info`/`plan` before relying on it.
 
 ## Two binaries
 
@@ -53,9 +54,10 @@ You can pass an XML profile, individual flags, or both:
 - When both are given, the **XML wins per field** and the CLI fills in the rest.
 - `--skip <domains>` excludes anything you don't want touched.
 
-Export a profile from Adrenalin's *Performance > Tuning*; the file lives at
-`%LOCALAPPDATA%\AMD\Radeonsoftware\uv.xml`. Copy it somewhere and point the tool
-at it.
+Export a profile from Adrenalin's *Performance > Tuning*. The file is written to
+`%LOCALAPPDATA%\AMD\Radeonsoftware\` under whatever name you chose when
+exporting - `uv.xml` is a common convention, not a fixed filename. Copy it
+somewhere and point the tool at it.
 
 ### Flags (for `apply` and `plan`)
 
